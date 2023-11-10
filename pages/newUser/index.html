@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Book</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <container>
+        <div class="user">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="userSvg"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>
+            <strong>Yago Santana Rocha</strong>
+        </div>
+        <content class="content">
+            <div class="selectContent">
+                <select class="select" name="Menu">
+                    <option value="none" selected disabled hidden>
+                        Menu
+                    </option>
+                    <option value="1">Cadastrar Novo Usuario</option>
+                    <option value="2">Alterar Funcionario</option>
+                    <option value="3">Acessar Cadastro De Funcionario</option>
+                    <option value="4">Dados Bancarios</option>
+                </select>
+            </div>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th class="title" colspan="2">Cadastrar Novo Usuario</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Digite o Nome">Nome</label>
+                            <input type="text" id="input" maxlength="10">
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Digite o Sobrenome">Sobrenome</label>
+                                <input type="text" id="input" maxlength="10">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Digite Seu CPF">CPF</label>
+                            <input type="text" autocomplete="off" maxlength="14" id="cpf" />
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Digite o RG">RG</label>
+                                <input type="text" id="input" oninput="this.value = Rg(this.value)" maxlength="12">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Digite o endereço">Endereço</label>
+                            <input type="text" id="input">
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Digite o telefone">Telefone</label>
+                                <input type="tel"  id="input" onkeyup="handlePhone(event)">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Escolha o nivel de escolaridade">Escolaridade</label>
+                            <select id="escolaridade">
+                                <option value="0" hidden></option>
+                                <option value="1">Ensino medio Completo</option>
+                                <option value="2">Ensino medio Incompleto</option>
+                                <option value="3">Ensino Superior Completo</option>
+                                <option value="4">Ensino Superior Incompleto</option>
+                                <option value="5">Ensino Superior Cursando</option>
+                            </select>
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Digite a carteira de trabalho">CTPS</label>
+                                <input type="text" id="input">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Selecione o cargo">Cargo</label>
+                            <select id="select">
+                                <option value="0" hidden></option>
+                                <option value="1">Vendedor</option>
+                                <option value="1">Operador de Caixa</option>
+                                <option value="1">Repositor</option>
+                                <option value="1">Gerente</option>
+                                <option value="1">Supervisor</option>
+                                <option value="1">Serviços Gerais</option>
+                                <option value="1">Limpeza</option>
+                            </select>
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Selecione o Tipo de Contrato">Tipo de Contrato</label>
+                                <select id="select">
+                                    <option value="0" hidden></option>
+                                    <option value="1">CLT</option>
+                                    <option value="2">CNPJ</option>
+                                    <option value="3">Autonômo</option>
+                                    <option value="4">Informal</option>
+                                </select>
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label>Data Emissão</label>
+                            <input type="date" id="date">
+                            <td style="display: flex; flex-direction: column;">
+                                <label>Data Demissão</label>
+                                <input type="date" id="date">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <td style="display: flex; flex-direction: column;">
+                            <label aria-placeholder="Digite os beneficios">Beneficios</label>
+                            <input type="text" id="input">
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Escolha o departamento">Departamento</label>
+                                <select id="departamento">
+                                    <option value="0" hidden></option>
+                                    <option value="1">Almoxerifado</option>
+                                    <option value="2">Vendas</option>
+                                    <option value="3">Atendimento</option>
+                                </select>
+                            </td>
+                        </td>    
+                    </tr>
+                </tbody>
+                <td>
+                    <a class="cadastrar" href="">
+                        <button class="button">Cadastrar</button>
+                    </a>
+                </td>
+            </table>
+        </content>
+    </container>
+    <script src="./script.js"></script>
+
+    <a class="back" href="file:///C:/Users/yagoe/Desktop/Pim/index.html">
+        <button class="buttonBack">Sair do sistema</button>
+    </a>
+</body>
+</html>
