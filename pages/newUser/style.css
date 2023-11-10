@@ -43,14 +43,12 @@
     padding: 0px 50px;
 }
 .table{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
+    display: none;
+    width: 100%;
     height: 450px;
     background-color: #dcdbdb;
     border: 1px solid black;
+    padding: 1rem 2rem;
 }
 #input{
     width: 170px;
@@ -113,7 +111,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20rem;
+    margin-left: 2.3rem;
     margin-top: -2rem;
     background-color: rgb(122, 3, 3);
     border: 1px solid rgb(122, 3, 3);
@@ -128,3 +126,31 @@
  .back:hover{
      scale: 1.2 ;
  }
+
+ @media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .selectContent {
+        flex-direction: column;
+    }
+
+    .select {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .table {
+        display: block;
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        padding: 0;
+    }
+}
+    

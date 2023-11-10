@@ -14,7 +14,7 @@
         </div>
         <content class="content">
             <div class="selectContent">
-                <select class="select" name="Menu">
+                <select class="select" id="Menu" name="menu">
                     <option value="none" selected disabled hidden>
                         Menu
                     </option>
@@ -24,123 +24,127 @@
                     <option value="4">Dados Bancarios</option>
                 </select>
             </div>
-            <table class="table">
-                <thead class="thead">
-                    <tr>
-                        <th class="title" colspan="2">Cadastrar Novo Usuario</th>
-                    </tr>
-                </thead>
-                <tbody class="tbody">
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Digite o Nome">Nome</label>
-                            <input type="text" id="input" maxlength="10">
+
+            <tableContent class="tableContent">
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th class="title" colspan="2">Cadastrar Novo Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Digite o Sobrenome">Sobrenome</label>
+                                <label aria-placeholder="Digite o Nome">Nome</label>
                                 <input type="text" id="input" maxlength="10">
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Digite o Sobrenome">Sobrenome</label>
+                                    <input type="text" id="input" maxlength="10">
+                                </td>
                             </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Digite Seu CPF">CPF</label>
-                            <input type="text" autocomplete="off" maxlength="14" id="cpf" />
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Digite o RG">RG</label>
-                                <input type="text" id="input" oninput="this.value = Rg(this.value)" maxlength="12">
+                                <label aria-placeholder="Digite Seu CPF">CPF</label>
+                                <input type="text" autocomplete="off" maxlength="14" id="cpf" />
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Digite o RG">RG</label>
+                                    <input type="text" id="input" oninput="this.value = Rg(this.value)" maxlength="12">
+                                </td>
                             </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Digite o endereço">Endereço</label>
-                            <input type="text" id="input">
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Digite o telefone">Telefone</label>
-                                <input type="tel"  id="input" onkeyup="handlePhone(event)">
-                            </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Escolha o nivel de escolaridade">Escolaridade</label>
-                            <select id="escolaridade">
-                                <option value="0" hidden></option>
-                                <option value="1">Ensino medio Completo</option>
-                                <option value="2">Ensino medio Incompleto</option>
-                                <option value="3">Ensino Superior Completo</option>
-                                <option value="4">Ensino Superior Incompleto</option>
-                                <option value="5">Ensino Superior Cursando</option>
-                            </select>
-                            <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Digite a carteira de trabalho">CTPS</label>
+                                <label aria-placeholder="Digite o endereço">Endereço</label>
                                 <input type="text" id="input">
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Digite o telefone">Telefone</label>
+                                    <input type="tel"  id="input" onkeyup="handlePhone(event)">
+                                </td>
                             </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Selecione o cargo">Cargo</label>
-                            <select id="select">
-                                <option value="0" hidden></option>
-                                <option value="1">Vendedor</option>
-                                <option value="1">Operador de Caixa</option>
-                                <option value="1">Repositor</option>
-                                <option value="1">Gerente</option>
-                                <option value="1">Supervisor</option>
-                                <option value="1">Serviços Gerais</option>
-                                <option value="1">Limpeza</option>
-                            </select>
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Selecione o Tipo de Contrato">Tipo de Contrato</label>
+                                <label aria-placeholder="Escolha o nivel de escolaridade">Escolaridade</label>
+                                <select id="escolaridade">
+                                    <option value="0" hidden></option>
+                                    <option value="1">Ensino medio Completo</option>
+                                    <option value="2">Ensino medio Incompleto</option>
+                                    <option value="3">Ensino Superior Completo</option>
+                                    <option value="4">Ensino Superior Incompleto</option>
+                                    <option value="5">Ensino Superior Cursando</option>
+                                </select>
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Digite a carteira de trabalho">CTPS</label>
+                                    <input type="text" id="input">
+                                </td>
+                            </td>
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                            <td style="display: flex; flex-direction: column;">
+                                <label aria-placeholder="Selecione o cargo">Cargo</label>
                                 <select id="select">
                                     <option value="0" hidden></option>
-                                    <option value="1">CLT</option>
-                                    <option value="2">CNPJ</option>
-                                    <option value="3">Autonômo</option>
-                                    <option value="4">Informal</option>
+                                    <option value="1">Vendedor</option>
+                                    <option value="1">Operador de Caixa</option>
+                                    <option value="1">Repositor</option>
+                                    <option value="1">Gerente</option>
+                                    <option value="1">Supervisor</option>
+                                    <option value="1">Serviços Gerais</option>
+                                    <option value="1">Limpeza</option>
                                 </select>
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Selecione o Tipo de Contrato">Tipo de Contrato</label>
+                                    <select id="select">
+                                        <option value="0" hidden></option>
+                                        <option value="1">CLT</option>
+                                        <option value="2">CNPJ</option>
+                                        <option value="3">Autonômo</option>
+                                        <option value="4">Informal</option>
+                                    </select>
+                                </td>
                             </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label>Data Emissão</label>
-                            <input type="date" id="date">
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label>Data Demissão</label>
+                                <label>Data Emissão</label>
                                 <input type="date" id="date">
+                                <td style="display: flex; flex-direction: column;">
+                                    <label>Data Demissão</label>
+                                    <input type="date" id="date">
+                                </td>
                             </td>
-                        </td>
-                    </tr>
-                    <tr style="display: flex; flex-direction: row; gap: 1rem;">
-                        <td style="display: flex; flex-direction: column;">
-                            <label aria-placeholder="Digite os beneficios">Beneficios</label>
-                            <input type="text" id="input">
+                        </tr>
+                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
-                                <label aria-placeholder="Escolha o departamento">Departamento</label>
-                                <select id="departamento">
-                                    <option value="0" hidden></option>
-                                    <option value="1">Almoxerifado</option>
-                                    <option value="2">Vendas</option>
-                                    <option value="3">Atendimento</option>
-                                </select>
-                            </td>
-                        </td>    
-                    </tr>
-                </tbody>
-                <td>
-                    <a class="cadastrar" href="">
-                        <button class="button">Cadastrar</button>
-                    </a>
-                </td>
-            </table>
+                                <label aria-placeholder="Digite os beneficios">Beneficios</label>
+                                <input type="text" id="input">
+                                <td style="display: flex; flex-direction: column;">
+                                    <label aria-placeholder="Escolha o departamento">Departamento</label>
+                                    <select id="departamento">
+                                        <option value="0" hidden></option>
+                                        <option value="1">Almoxerifado</option>
+                                        <option value="2">Vendas</option>
+                                        <option value="3">Atendimento</option>
+                                    </select>
+                                </td>
+                            </td>    
+                        </tr>
+                    </tbody>
+                    <td>
+                        <a class="cadastrar" href="">
+                            <button class="button">Cadastrar</button>
+                        </a>
+                    </td>
+                </table>
+            </tableContent>
         </content>
     </container>
-    <script src="./script.js"></script>
-
+    
     <a class="back" href="file:///C:/Users/yagoe/Desktop/Pim/index.html">
         <button class="buttonBack">Sair do sistema</button>
     </a>
+    
+    <script src="./script.js"></script>
 </body>
 </html>

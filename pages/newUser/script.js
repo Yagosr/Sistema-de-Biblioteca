@@ -22,8 +22,26 @@ const handlePhone = (event) => {
   
   const phoneMask = (value) => {
     if (!value) return ""
-    value = value.replace(/\D/g,'')
-    value = value.replace(/(\d{2})(\d)/,"($1) $2")
-    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+        value = value.replace(/\D/g,'')
+        value = value.replace(/(\d{2})(\d)/,"($1) $2")
+        value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
   }
+
+  document.addEventListener("DOMContentLoaded", function() {
+     const menuSelect = document.getElementById("Menu");
+     const form = document.querySelector(".table");
+     
+     menuSelect.addEventListener("change", function() {
+         if (menuSelect.value === "1") {
+             form.style.display = "block";
+         } else {
+             form.style.display = "none";
+         }
+     });
+ });
+ 
+ 
+ 
+ 
+ 
