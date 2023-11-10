@@ -146,6 +146,36 @@
         display: block;
         width: 90%;
     }
+
+    #input {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    #date {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    #select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #escolaridade {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    #cpf {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    #departamento {
+        width: 50%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 400px) {
