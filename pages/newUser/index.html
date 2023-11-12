@@ -29,7 +29,7 @@
                 <table class="table">
                     <thead class="thead">
                         <tr>
-                            <th class="title" colspan="2">Cadastrar Novo Usuario</th>
+                            <th class="title">Cadastrar Novo Usuario</th>
                         </tr>
                     </thead>
                     <tbody class="tbody">
@@ -94,7 +94,7 @@
                                     <option value="1">Limpeza</option>
                                 </select>
                                 <td style="display: flex; flex-direction: column;">
-                                    <label aria-placeholder="Selecione o Tipo de Contrato">Tipo de Contrato</label>
+                                    <label id="label" aria-placeholder="Selecione o Tipo de Contrato">Tipo de Contrato</label>
                                     <select id="contrato">
                                         <option value="0" hidden></option>
                                         <option value="1">CLT</option>
@@ -115,7 +115,7 @@
                                 </td>
                             </td>
                         </tr>
-                        <tr style="display: flex; flex-direction: row; gap: 1rem;">
+                        <tr class="bnf" style="">
                             <td style="display: flex; flex-direction: column;">
                                 <label aria-placeholder="Digite os beneficios">Beneficios</label>
                                 <input type="text" id="beneficios">
