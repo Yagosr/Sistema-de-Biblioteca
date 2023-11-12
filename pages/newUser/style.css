@@ -50,19 +50,26 @@
     border: 1px solid black;
     padding: 1rem 2rem;
 }
+
+.cargo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 #input{
     width: 170px;
     height: 20px;
 }
 #date{
-    width: 100%;
+    width: 175px;
     height: 25px;
     gap:4rem;
 }
 
 #select {
     width: 180px;
-    height: 26px;
+    height: 27px;
 }
 #escolaridade {
     width: 180px;
@@ -74,7 +81,11 @@
 }
 #departamento {
     width: 180px;
-    height: 26px;
+    height: 27px;
+}
+#beneficios {
+    width: 175px;
+    height: 20px
 }
 
 .cadastrar{
@@ -127,6 +138,12 @@
      scale: 1.2 ;
  }
 
+ .ctps{
+    display: flex; 
+    flex-direction: row; 
+    gap: 0.5rem;
+ }
+
  @media (max-width: 700px) {
     .content {
         flex-direction: column;
@@ -139,7 +156,7 @@
 
     .select {
         width: 50%;
-        margin-bottom: 1rem;
+        margin-bottom: -2rem;
     }
 
     .table {
@@ -147,13 +164,19 @@
         width: 90%;
     }
 
+    .cargo {
+        width: 100%;
+        max-width: 100%;
+        gap:0.5rem;
+    }
+
     #input {
-        width: 50%;
+        width: 100%;
         max-width: 100%;
     }
 
     #date {
-        width: 50%;
+        width: 175px;
         max-width: 100%;
     }
 
@@ -163,18 +186,32 @@
     }
 
     #escolaridade {
-        width: 50%;
+        width: 185px;
         max-width: 100%;
     }
 
     #cpf {
-        width: 50%;
+        width: 100%;
         max-width: 100%;
     }
 
     #departamento {
-        width: 50%;
+        width: 180px;
         max-width: 100%;
+    }
+
+    #cargoSelect {
+        width: 185px;
+        height: 27px;
+    }
+
+    #contrato {
+        width: 185px;
+        height: 27px;
+    }
+
+    .buttonBack{
+        margin: 1rem 1rem 0 0;
     }
 }
 
