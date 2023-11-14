@@ -1,27 +1,29 @@
-.user{
+.user {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 10px;
     padding: 2rem;
 }
 
-.bnf{
-    display: flex; 
+.bnf {
+    display: flex;
     flex-direction: row;
     gap: 1rem;
 }
+
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:2.5rem;
+    gap: 2.5rem;
 }
 
-.selectContent{
+.selectContent {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .select {
     width: 100%;
     height: 25px;
@@ -34,20 +36,22 @@
 
 .select:focus {
     outline: none;
-    border-color: #007bff; 
-    background: none ;
+    border-color: #007bff;
+    background: none;
 }
+
 .input {
     display: flex;
     flex-direction: column;
 }
 
-.title{
+.title {
     background-color: #c6c4be;
     border: 1px solid black;
     padding: 0px 50px;
 }
-.table{
+
+.table {
     display: none;
     width: 100%;
     height: 450px;
@@ -56,49 +60,54 @@
     padding: 1rem 2rem;
 }
 
-.cargo{
+.cargo {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.6rem;
+}
+
+.ctps {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
-#input{
-    width: 170px;
-    height: 20px;
-}
-#date{
-    width: 175px;
-    height: 23px;
-    gap:4rem;
-}
 
-#select {
-    width: 180px;
-    height: 27px;
-}
-#escolaridade {
-    width: 180px;
-    height: 26px;
-}
-#cpf {
-    width: 170px;
-    height: 20px;
-}
-#departamento {
-    width: 180px;
-    height: 27px;
-}
+#name,
+#Sobrenome,
+#cpf,
+#rg,
+#endereco,
+#tel,
+#ctpsSelect,
 #beneficios {
-    width: 175px;
-    height: 20px
+    height: 3vh;
 }
 
-.cadastrar{
+#escolaridade,
+#departamento {
+    width: 13.3vw;
+    height: 4vh;
+}
+
+#cargoSelect,
+#contrato {
+    width: 13.3vw;
+    height: 4vh;
+    margin-right: 5px;
+}
+
+#date {
+    width: 12.9vw;
+    height: 3.5vh;
+}
+
+.cadastrar {
     text-decoration: none;
-    padding-top:1rem;
+    padding-top: 1rem;
 }
 
-.button {    
+.button {
     cursor: pointer;
     padding: 0.5rem 4rem;
     text-decoration: none;
@@ -112,17 +121,17 @@
 
 .button:hover {
     background-color: gray;
- }
+}
 
- .cadastrar:hover{
-    scale: 2.1;
- }
+.cadastrar:hover {
+    transform: scale(1.2);
+}
 
- .back{
+.back {
     text-decoration: none;
- }
+}
 
- .buttonBack {
+.buttonBack {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -134,101 +143,17 @@
     color: black;
     border-radius: 5px;
     padding: 0.3rem 1rem;
- }
-
- .buttonBack:hover {
-    background-color: red;
- }
- .back:hover{
-     scale: 1.2 ;
- }
-
- .ctps{
-    display: flex; 
-    flex-direction: row; 
-    gap: 0.5rem;
- }
-
- @media (max-width: 700px) {
-    .content {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .selectContent {
-        flex-direction: column;
-    }
-
-    .select {
-        width: 50%;
-        margin-bottom: -2rem;
-    }
-
-    .table {
-        display: block;
-        width: 90%;
-    }
-
-    .cargo {
-        width: 100%;
-        max-width: 100%;
-        gap:0.5rem;
-    }
-
-    #input {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #date {
-        width: 175px;
-        max-width: 100%;
-    }
-
-    #select {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #escolaridade {
-        width: 185px;
-        max-width: 100%;
-    }
-
-    #cpf {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #departamento {
-        width: 180px;
-        max-width: 100%;
-    }
-
-    #cargoSelect {
-        width: 185px;
-        height: 27px;
-    }
-
-    #contrato {
-        width: 185px;
-        height: 27px;
-    }
-
-    .buttonBack{
-        margin: 1rem 1rem 0 0;
-    }
 }
 
-@media (max-width: 440px) {
-    .title {
-        display: flex;
-        border: none;
-        margin-right: 3rem;
-        font-size: 1.2rem;
-        background-color: transparent;
-    }
+.buttonBack:hover {
+    background-color: red;
+}
 
+.back:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 700px) {
     .content {
         flex-direction: column;
         align-items: stretch;
@@ -248,76 +173,37 @@
         width: 90%;
     }
 
-    .cargo {
-        justify-content: space-between;
-    }
-
-    #input {
-        width: 50%;
-        max-width: 70%;
-    }
-
+    #name,
+    #Sobrenome,
+    #cpf,
+    #rg,
+    #endereco,
+    #tel,
+    #ctpsSelect,
+    #beneficios,
+    #escolaridade,
+    #departamento,
+    #cargoSelect,
+    #contrato,
     #date {
-        width: 50%;
-        max-width: 100%;
+        width: 100%;
+        height: 1vh;
+        margin-bottom: 1rem;
     }
 
-    #select {
-        width: 60%;
-        max-width: 100%;
-    }
-
-    #escolaridade {
-        width: 98px;
-        max-width: 100%;
-    }
-
-    #cpf {
-        width: 50%;
-        max-width: 100%;
-    }
-
-    #departamento {
-        width: 100px;
-        max-width: 100%;
-    }
-
-    #cargoSelect {
-        width: 100px;
-        height: 27px;
-    }
-
-    #contrato {
-        width: 95px;
-        height: 27px;
-        position: relative;
-        right: 4.5rem;
-    }
-
-    #label{
-        position: relative;
-        right: 4.7rem;
-    }
-
-    #beneficios{
-        width: 90px;
-        height: 22px;
-    }
-
-    .ctps{  
-        gap: 5.9rem;
-    }
-
-    .bnf{
-        gap:6rem
+    .button
+    .cadastrar {
+        width: 100%;
+        margin-top: 1rem;
     }
 
     .buttonBack{
-        margin: 1rem 1rem 0 0;
+        margin-top: 1rem;
     }
 
-    .button{
-        width: 77%;
-    }
+}
+
+@media only screen and (max-width: 400px) {
+
 }
     

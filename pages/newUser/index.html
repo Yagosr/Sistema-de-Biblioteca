@@ -36,10 +36,10 @@
                         <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
                                 <label aria-placeholder="Digite o Nome">Nome</label>
-                                <input type="text" id="input" maxlength="10">
+                                <input type="text" id="name" maxlength="10">
                                 <td style="display: flex; flex-direction: column;">
                                     <label aria-placeholder="Digite o Sobrenome">Sobrenome</label>
-                                    <input type="text" id="input" maxlength="10">
+                                    <input type="text" id="Sobrenome" maxlength="10">
                                 </td>
                             </td>
                         </tr>
@@ -49,17 +49,17 @@
                                 <input type="text" autocomplete="off" maxlength="14" id="cpf" />
                                 <td style="display: flex; flex-direction: column;">
                                     <label aria-placeholder="Digite o RG">RG</label>
-                                    <input type="text" id="input" oninput="this.value = Rg(this.value)" maxlength="12">
+                                    <input type="text" id="rg" oninput="this.value = Rg(this.value)" maxlength="12">
                                 </td>
                             </td>
                         </tr>
                         <tr style="display: flex; flex-direction: row; gap: 1rem;">
                             <td style="display: flex; flex-direction: column;">
                                 <label aria-placeholder="Digite o endereço">Endereço</label>
-                                <input type="text" id="input">
+                                <input type="text" id="endereco">
                                 <td style="display: flex; flex-direction: column;">
                                     <label aria-placeholder="Digite o telefone">Telefone</label>
-                                    <input type="tel"  id="input" onkeyup="handlePhone(event)">
+                                    <input type="tel"  id="tel" onkeyup="handlePhone(event)">
                                 </td>
                             </td>
                         </tr>
@@ -76,7 +76,7 @@
                                 </select>
                                 <td style="display: flex; flex-direction: column;">
                                     <label aria-placeholder="Digite a carteira de trabalho">CTPS</label>
-                                    <input type="text" id="input">
+                                    <input type="text" id="ctpsSelect">
                                 </td>
                             </td>
                         </tr>
@@ -115,7 +115,7 @@
                                 </td>
                             </td>
                         </tr>
-                        <tr class="bnf" style="">
+                        <tr class="bnf">
                             <td style="display: flex; flex-direction: column;">
                                 <label aria-placeholder="Digite os beneficios">Beneficios</label>
                                 <input type="text" id="beneficios">
