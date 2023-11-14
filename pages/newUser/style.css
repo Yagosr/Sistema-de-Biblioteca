@@ -170,6 +170,7 @@
 
     .table {
         display: block;
+        height: 100%;
         width: 90%;
     }
 
@@ -179,31 +180,150 @@
     #rg,
     #endereco,
     #tel,
-    #ctpsSelect,
     #beneficios,
-    #escolaridade,
-    #departamento,
-    #cargoSelect,
-    #contrato,
     #date {
-        width: 100%;
-        height: 1vh;
-        margin-bottom: 1rem;
+        width: 97%;
+        height: 3vh;
+        
+    }
+
+    #ctpsSelect{
+        width: 33vw;
+        margin-right: -0.3rem;
+    }
+
+    #escolaridade{
+        width: 34vw;
+        height: 4vh;
+    }
+
+    #departamento{
+        width: 34vw;
+        height: 4vh;
+        margin-right: -0.5rem;
+    }
+
+    .cargo{
+        gap:1rem
+    }
+
+    #contrato{
+        width: 34vw;
+        height: 4vh;
+        margin-left: -0.2rem ;
+    }
+
+    #cargoSelect{
+        width: 34vw;
+        height: 4vh;
+    }
+
+    .ctps{
+        gap: 1rem;
+    }
+
+    #date{
+        width: 33.1vw;
+        gap: 1rem;
     }
 
     .button
     .cadastrar {
         width: 100%;
-        margin-top: 1rem;
     }
 
     .buttonBack{
         margin-top: 1rem;
+        margin-left: 0rem;
     }
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
+    .content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .selectContent {
+        flex-direction: column;
+    }
+
+    .select {
+        width: 50%;
+        margin-bottom: -2rem;
+    }
+
+    .table {
+        display: block;
+        height: 100%;
+        width: 90%;
+    }
+
+    #name,
+    #Sobrenome,
+    #cpf,
+    #rg,
+    #endereco,
+    #tel,
+    #beneficios,
+    #date {
+        width: 90%;
+        height: 3vh;
+        
+    }
+
+    #ctpsSelect{
+        width: 31vw;
+        margin-left: 0.3rem;
+    }
+
+    #escolaridade{
+        width: 33vw;
+        height: 3.5vh;
+    }
+
+    #departamento{
+        width: 33vw;
+        height: 3.5vh;
+        margin-right: 0.3rem;
+    }
+
+    .cargo{
+        gap:1rem
+    }
+
+    #contrato{
+        width: 33vw;
+        height: 3.5vh;
+        margin-left: 0.1rem;
+    }
+
+    #cargoSelect{
+        width: 33vw;
+        height: 3.5vh;
+    }
+
+    .ctps{
+        gap: 1rem;
+    }
+    .ctpsLabel{
+        margin-left: 0.3rem;
+    }
+
+    #date{
+        width: 32.2vw;
+    }
+
+    .button
+    .cadastrar {
+        width: 100%;
+    }
+
+    .buttonBack{
+        margin-top: 1rem;
+        margin-left: 0rem;
+    }
 
 }
     
